@@ -2,23 +2,20 @@
 
 namespace Database\Factories;
 
-use App\Models\Customer;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-/**
- * @extends Factory<Customer>
- */
 class CustomerFactory extends Factory
 {
-    /**
-     * Define the model's default state.
-     *
-     * @return array<string, mixed>
-     */
     public function definition(): array
     {
         return [
-            //
+            'customer_number' => 'CUST-' . fake()->unique()->numberBetween(1000, 9999),
+            'company_name' => fake()->company(),
+            'rfc' => fake()->regexify('[A-Z]{3}[0-9]{6}[A-Z0-9]{3}'),
+            'email' => fake()->unique()->companyEmail(),
+            'phone_number' => fake()->phoneNumber(),
+            'contact_person' => fake()->name(),
+            'default_address' => fake()->address(),
         ];
     }
 }

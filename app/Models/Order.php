@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\SoftDeletes; // No olvides importar esto arriba
 
 class Order extends Model
 {
-    use SoftDeletes; // Activa el borrado lógico
+    use HasFactory, SoftDeletes; // Activa el borrado lógico
 
     protected $primaryKey = 'invoice_number';
     public $incrementing = false;
