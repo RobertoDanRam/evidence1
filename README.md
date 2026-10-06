@@ -9,7 +9,7 @@ For this phase of the project, the backend database architecture was implemented
 ## Features
 - **Customer Tracking:** Customers can view the real-time status of their orders using their Customer Number and Invoice Number.
 - **Role-Based Access Control:** Pre-configured administrative roles to manage internal staff (Sales, Purchasing, Warehouse, Route).
-- **Order Lifecycle Management:** Seamless transition of order statuses (Ordered ➡️ In Process ➡️ In Route ➡️ Delivered).
+- **Order Lifecycle Management:** Seamless transition of order statuses (Ordered -> In Process -> In Route -> Delivered).
 - **Photographic Evidence:** Route operators can upload photos of loaded and delivered materials, including exact timestamps and geolocation tracking.
 - **Logical Deletion:** Safe deletion of orders (hidden from main views without losing database records) utilizing Laravel SoftDeletes.
 - **Transactional Integrity:** Implementation of `OrderDetail` and `MaterialStock` entities to freeze historical prices and manage inventory dynamically.
